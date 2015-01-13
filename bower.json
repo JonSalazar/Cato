@@ -1,0 +1,22 @@
+{
+  "name": "cato",
+  "version": "0.0.0",
+  "authors": [
+    "Lindor <jair4040@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3.8",
+    "socket.io-client": "1.2.1",
+    "bootstrap": "3.3.1",
+    "spinkit": "1.0.0"
+  }
+}

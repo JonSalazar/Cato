@@ -1,0 +1,52 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #F44336 !important;
+  color: #FFF !important;
+}
+
+h5 {
+    color: #FFCDD2 !important;
+}
+
+label {
+    font-size: 16px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.bg-dark-primary-color {
+    background: #D32F2F !important;
+}
+
+.board-position {
+   padding-top: 5px;
+   padding-bottom: 10px;
+   text-align: center;
+   vertical-align: middle;
+   height: 13em;
+}
+
+.board-position p {
+    font-size: 115px;
+}
+
+.board-position-container {
+    padding: 2px !important;
+}
+
+.sk-spinner-three-bounce div {
+    background-color: white !important;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.23), 0px 3px 10px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.23), 0px 3px 10px rgba(0, 0, 0, 0.16);
+}

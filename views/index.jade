@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  body(ng-controller="GameCtrl")
+    h1 cato
+    h5(ng-if="nemesis !== ''") Jugando contra {{ nemesis }}
+    div.container
+        div.col-md-8.col-md-offset-2(ng-hide="isLogged || isLoading")
+            form(novalidate, name="loginForm")
+                div.form-group
+                    label(for="input_username") Nombre de usuario
+                    input#input_username.form-control(type="text", placeholder="usuario", ng-model="username", required, minlength="4")
+                button.btn.btn-success(type="submit", ng-disabled="loginForm.$invalid", ng-click="startGame()") Empezar a jugar
+
+        div.col-md-8.col-md-offset-2(ng-show='isLogged')
+            div(ng-repeat="row in board", ng-hide='result')
+                div.row
+                    div.col-xs-4.board-position-container(ng-repeat="col in row")
+                        div.bg-dark-primary-color.board-position(ng-click="newMove($parent.$index, $index)", ng-disabled='isNemesisPlaying')
+                            p {{ col.type.replace('-', ' ') }}
+            div(ng-show="result")
+                h3(ng-show="win === 'Win'") Winner !!
+                h3(ng-show="win === 'Lose'") Loser !!
+                h3(ng-show="win === 'Draw'") Tie !!
+
+        div.col-md-8.col-md-offset-2(ng-show='isLoading')
+            div.sk-spinner.sk-spinner-three-bounce
+                div.sk-bounce1
+                div.sk-bounce2
+                div.sk-bounce3
